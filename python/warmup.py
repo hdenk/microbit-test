@@ -10,8 +10,11 @@ def minusEins(n):
 def malZweiPlusX(n, x):
     return n * 2 + x
 
+def malZweiPlusXMinusY(n, x, y):
+    return n * 2 + x - y
+
 def check():
-    return malZweiPlusX(1, 3) == 5
+    return plusEins(malZweiPlusXMinusY(1, 3, 2)) == 4
 
 # hier geht's los... do we smile ? :) 
 if check():
