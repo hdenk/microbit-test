@@ -4,8 +4,11 @@ from microbit import *
 def plusEins(n):
     return n + 1
 
+def minusEins(n):
+    return n - 1
+
 def check():
-    return plusEins(0) == 1
+    return minusEins(plusEins(0)) == 0
 
 # hier geht's los... do we smile ? :) 
 if check():
