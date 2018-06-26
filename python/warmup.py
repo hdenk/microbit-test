@@ -14,7 +14,7 @@ def malZweiPlusXMinusY(n, x, y):
     return n * 2 + x - y
 
 def check():
-    return plusEins(malZweiPlusXMinusY(1, 3, 2)) == 4
+    return malZweiPlusX(plusEins(malZweiPlusXMinusY(1, 3, 2)), 1) == 9
 
 # hier geht's los... do we smile ? :) 
 if check():
