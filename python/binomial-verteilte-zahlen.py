@@ -16,7 +16,7 @@ def blinkLED(ms):
     
 while True:
 	# Wuerfeln bis Treffer
-    while anzahlWuerfe < len(verteilung):
+    while anzahlWuerfe < len(verteilung) - 1:
         zufallsZahl = random.randint(1, 6) 
         anzahlWuerfe = anzahlWuerfe + 1
         istTreffer = zufallsZahl % 2 == 0
@@ -32,12 +32,12 @@ while True:
     #display.scroll(str(anzahlTreffer) + ":" + str(verteilung[anzahlTreffer]))
 
     # Ausgabe Anzahl Versuche und Verteilung 
-    if anzahlVersuche % 1000 == 0:
+    if button_a.is_pressed() or anzahlVersuche % 1000 == 0:
         display.scroll("v:" + str(anzahlVersuche))
         for index in range(0, len(verteilung)):
             display.scroll(str(index) + ":" + str(verteilung[index]))
 
-	# Reset anzahlWuerfe und istTreffer (für den naechsten Versuch) 
+	# Reset für den naechsten Versuch
     anzahlWuerfe = 0
     istTreffer = False
     anzahlTreffer = 0
